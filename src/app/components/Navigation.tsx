@@ -47,7 +47,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className="w-full bg-gradient-to-t from-red-900 via-red-900 to-black text-white py-4 px-2 flex flex-col items-center z-50 overflow-x-hidden"
+      className="w-full bg-gradient-to-t from-red-900 via-red-900 to-black text-white py-4 px-2 flex flex-col items-center z-50 overflow-hidden min-h-[120px] md:min-h-[140px] header-clip"
       style={{
         background:
           "linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(127, 29, 29) 100%)",
@@ -58,7 +58,7 @@ export default function Navigation() {
       {/* Logo and Text Section */}
       <div className="relative flex items-center justify-center w-full max-w-6xl mx-auto gap-[55px] mb-4 md:mb-0 px-4 md:px-6">
         {/* Left Navigation Links - Hidden on mobile */}
-        <div className="relative z-10 hidden md:flex gap-6">
+        <div className="relative z-10 nav-desktop-gt-950 gap-6">
           {navLinks.slice(0, 3).map((link) => (
             <a
               key={link.name}
@@ -99,7 +99,7 @@ export default function Navigation() {
         </div>
 
         {/* Right Navigation Links - Hidden on mobile */}
-        <div className="relative z-10 hidden md:flex gap-6">
+        <div className="relative z-10 nav-desktop-gt-950 gap-6">
           {navLinks.slice(3).map((link) => (
             <a
               key={link.name}
@@ -115,7 +115,7 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Navigation Links */}
-      <div className="flex flex-wrap gap-4 md:hidden justify-center">
+      <div className="flex flex-wrap gap-4 nav-mobile-lte-950 justify-center">
         {navLinks.map((link) => (
           <a
             key={link.name}

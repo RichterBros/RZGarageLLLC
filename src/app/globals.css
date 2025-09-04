@@ -613,3 +613,24 @@ a[role="button"],
   /* 1px outline that follows clip-path; uses box-shadow spread */
   box-shadow: 0 0 0 1px rgba(209, 213, 219, 1);
 }
+
+/* Responsive clipped header background */
+.header-clip {
+  --clip-cut-y: 55%;
+  clip-path: polygon(0 0, 100% 0, 100% var(--clip-cut-y), 55% 100%, 45% 100%, 0 var(--clip-cut-y));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% var(--clip-cut-y), 55% 100%, 45% 100%, 0 var(--clip-cut-y));
+}
+@media (max-width: 950px) {
+  .header-clip { --clip-cut-y: 100%; }
+}
+
+/* Responsive visibility helpers for nav layout */
+.nav-desktop-gt-950 { display: none !important; }
+@media (min-width: 951px) {
+  .nav-desktop-gt-950 { display: flex !important; }
+}
+
+.nav-mobile-lte-950 { display: none !important; }
+@media (max-width: 950px) {
+  .nav-mobile-lte-950 { display: flex !important; }
+}
