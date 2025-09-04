@@ -31,8 +31,8 @@ export default function RootLayout({
         <div className="anglecut-wedge anglecut-wedge-tl" style={{ zIndex: 101, display: 'none' }} />
         <div className="anglecut-wedge anglecut-wedge-br" style={{ zIndex: 101, display: 'none' }} />
         {/* Three separate layered wedges at the exact top-left baseline position */}
-        <WedgeStack enableParallax={true} topSize={120} gap={60} position="tl" />
-        <WedgeStack enableParallax={true} topSize={120} gap={60} position="br" />
+        <WedgeStack enableParallax={false} topSize={0} gap={0} position="tl" />
+        <WedgeStack enableParallax={false} topSize={0} gap={0} position="br" />
         {/* Remove previous large copies now that band pattern is in place */}
         
         

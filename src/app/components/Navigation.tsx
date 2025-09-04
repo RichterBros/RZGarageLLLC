@@ -19,6 +19,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const logoContainerRef = useRef<HTMLAnchorElement>(null);
   const sheenRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const wrapper = logoContainerRef.current;
@@ -45,16 +46,56 @@ export default function Navigation() {
     }
   }, []);
 
+  // Parallax effect for the main header background
+  useEffect(() => {
+    const header = navRef.current;
+    if (!header) return;
+
+    const onScroll = () => {
+      const y = window.scrollY || 0;
+      const translateY = Math.min(y * 0.06, 48); // subtle downward drift
+      const scale = Math.min(1 + y * 0.0008, 1.06); // slight scale up
+      header.style.transform = `translateY(${translateY}px) scale(${scale.toFixed(3)})`;
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav
-      className="w-full bg-gradient-to-t from-red-900 via-red-900 to-black text-white py-4 px-2 flex flex-col items-center z-50 overflow-hidden min-h-[120px] md:min-h-[140px] header-clip"
-      style={{
-        background:
-          "linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(127, 29, 29) 100%)",
-        position: "relative",
-        zIndex: 3000,
-      }}
-    >
+    <div className="relative w-full">
+      {/* Background duplicate behind header */}
+      <div
+        aria-hidden="true"
+        className="header-clip absolute left-0 right-0 pointer-events-none min-h-[120px] md:min-h-[140px]"
+        style={{
+          top: 55,
+          background: "linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%)",
+          zIndex: 2999,
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="header-clip absolute left-0 right-0 pointer-events-none min-h-[120px] md:min-h-[140px]"
+        style={{
+          top: 70,
+          background: "linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%)",
+          zIndex: 2998,
+        }}
+      />
+      <nav
+        ref={navRef}
+        className="w-full bg-gradient-to-t from-red-900 via-red-900 to-black text-white py-4 px-2 flex flex-col items-center z-50 overflow-hidden min-h-[120px] md:min-h-[140px] header-clip"
+        style={{
+          background:
+            "linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(127, 29, 29) 100%)",
+          position: "relative",
+          zIndex: 3000,
+          opacity: 1,
+          willChange: "transform",
+        }}
+      >
       {/* Logo and Text Section */}
       <div className="relative flex items-center justify-center w-full max-w-6xl mx-auto gap-[55px] mb-4 md:mb-0 px-4 md:px-6">
         {/* Left Navigation Links - Hidden on mobile */}
@@ -128,6 +169,7 @@ export default function Navigation() {
           </a>
         ))}
       </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
