@@ -17,6 +17,8 @@ export default function Home() {
   const fairHeadingRef = useRef<HTMLHeadingElement>(null)
   const fairHeadingWrapperRef = useRef<HTMLDivElement>(null)
   const carBgRef = useRef<HTMLDivElement>(null)
+  const fairLayer1Ref = useRef<HTMLDivElement>(null)
+  const fairLayer2Ref = useRef<HTMLDivElement>(null)
   const heroHeadingRef = useRef<HTMLHeadingElement>(null)
   const heroAnimationDoneRef = useRef<boolean>(false)
   const separationDoneRef = useRef<boolean>(false)
@@ -114,6 +116,16 @@ export default function Home() {
       }
       if (wedgeRightRef.current) {
         wedgeRightRef.current.style.transform = `translate(${baseXRight}px, ${slowY}px)`
+      }
+
+      // Layered parallax for the section background: move upward on scroll
+      if (fairLayer1Ref.current) {
+        const t1 = Math.min(y * 0.20, 180)
+        fairLayer1Ref.current.style.transform = `translateY(${-t1}px)`
+      }
+      if (fairLayer2Ref.current) {
+        const t2 = Math.min(y * 0.28, 240)
+        fairLayer2Ref.current.style.transform = `translateY(${-t2}px)`
       }
     }
     
@@ -304,11 +316,47 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section ref={fairSectionRef} className="relative overflow-hidden py-16">
-        {/* Left and right wedge-strip overlays with hard bands; refs used for parallax translateX */}
-        <div ref={wedgeLeftRef} className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(30,46,67,1) 25%, rgba(74,162,197,1) 50%, rgba(48, 131, 90, 0) 50%)', zIndex: 20, willChange: 'transform' }} />
-        <div ref={wedgeRightRef} className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(315deg, rgba(30,46,67,1) 25%, rgba(74,162,197,1) 50%, rgba(235,237,236,0) 50%)', zIndex: 20, willChange: 'transform' }} />
-        <div className="relative container mx-auto px-4">
+      <section ref={fairSectionRef} className="relative overflow-visible py-16">
+        {/* Background duplicate layers behind clipped background */}
+        <div
+          ref={fairLayer1Ref}
+          aria-hidden="true"
+          className="absolute left-0 right-0 pointer-events-none"
+          style={{
+            top: -40,
+            bottom: -300,
+            background: 'linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%)',
+            zIndex: 0,
+            clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 60% 20%, 40% 20%, 0 0)',
+            WebkitClipPath: 'polygon(0 100%, 100% 100%, 100% 0, 60% 20%, 40% 20%, 0 0)',
+            willChange: 'transform',
+          }}
+        />
+        <div
+          ref={fairLayer2Ref}
+          aria-hidden="true"
+          className="absolute left-0 right-0 pointer-events-none"
+          style={{
+            top: -75,
+            bottom: -300,
+            background: 'linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%)',
+            zIndex: -1,
+            clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 60% 20%, 40% 20%, 0 0)',
+            WebkitClipPath: 'polygon(0 100%, 100% 100%, 100% 0, 60% 20%, 40% 20%, 0 0)',
+            willChange: 'transform',
+          }}
+        />
+        {/* Static clipped background (matches main header clip) */}
+        <div
+          className="header-clip absolute inset-0"
+          style={{
+            background: 'linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(127, 29, 29) 100%)',
+            zIndex: 1,
+            clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 60% 50%, 40% 50%, 0 0)',
+            WebkitClipPath: 'polygon(0 100%, 100% 100%, 100% 0, 60% 50%, 40% 50%, 0 0)',
+          }}
+        />
+        <div className="relative z-10 container mx-auto px-4">
           <div ref={fairHeadingWrapperRef} className="fade-in-from-bottom">
             <h2 ref={fairHeadingRef} className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight drop-shadow-lg text-center" style={{ color: 'rgb(74, 162, 192)' }}>Fair Pricing And A Comprehensive Warranty On All Repairs</h2>
           </div>
@@ -317,7 +365,7 @@ export default function Home() {
       </section>
 
       {/* Three Column Info Section */}
-      <section className="py-16" style={{ background: 'linear-gradient(to right, rgb(63, 139, 165), rgb(74, 162, 192), rgb(63, 139, 165))' }}>
+      <section className="relative z-20 py-16" style={{ background: 'linear-gradient(to right, rgb(63, 139, 165), rgb(74, 162, 192), rgb(63, 139, 165))' }}>
         <div className="container mx-auto px-4">
           <div ref={topCardRef} className="shadow-lg p-6 md:p-10">
             <div className="grid md:grid-cols-3 gap-8">

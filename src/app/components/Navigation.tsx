@@ -20,6 +20,8 @@ export default function Navigation() {
   const logoContainerRef = useRef<HTMLAnchorElement>(null);
   const sheenRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
+  const bgLayer1Ref = useRef<HTMLDivElement>(null);
+  const bgLayer2Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const wrapper = logoContainerRef.current;
@@ -49,13 +51,28 @@ export default function Navigation() {
   // Parallax effect for the main header background
   useEffect(() => {
     const header = navRef.current;
+    const layer1 = bgLayer1Ref.current;
+    const layer2 = bgLayer2Ref.current;
     if (!header) return;
 
     const onScroll = () => {
       const y = window.scrollY || 0;
-      const translateY = Math.min(y * 0.06, 48); // subtle downward drift
-      const scale = Math.min(1 + y * 0.0008, 1.06); // slight scale up
-      header.style.transform = `translateY(${translateY}px) scale(${scale.toFixed(3)})`;
+      const translateY = Math.min(y * 0.10, 96); // stronger downward drift
+      header.style.transform = `translateY(${translateY}px)`;
+
+      // Background duplicate layers: much stronger drift and quicker fade out
+      if (layer1) {
+        const t1 = Math.min(y * 0.50, 180);
+        const o1 = Math.max(0, 1 - y / 540);
+        layer1.style.transform = `translateY(${t1}px)`;
+        layer1.style.opacity = o1.toFixed(2);
+      }
+      if (layer2) {
+        const t2 = Math.min(y * 0.78, 240);
+        const o2 = Math.max(0, 1 - y / 450);
+        layer2.style.transform = `translateY(${t2}px)`;
+        layer2.style.opacity = o2.toFixed(3);
+      }
     };
 
     onScroll();
@@ -73,7 +90,9 @@ export default function Navigation() {
           top: 55,
           background: "linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%)",
           zIndex: 2999,
+          willChange: "transform, opacity",
         }}
+        ref={bgLayer1Ref}
       />
       <div
         aria-hidden="true"
@@ -82,7 +101,9 @@ export default function Navigation() {
           top: 70,
           background: "linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%)",
           zIndex: 2998,
+          willChange: "transform, opacity",
         }}
+        ref={bgLayer2Ref}
       />
       <nav
         ref={navRef}

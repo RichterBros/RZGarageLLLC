@@ -622,6 +622,7 @@ a[role="button"],
 }
 @media (max-width: 950px) {
   .header-clip { --clip-cut-y: 100%; }
+  .header-clip[aria-hidden="true"] { display: none !important; }
 }
 
 /* Responsive visibility helpers for nav layout */
