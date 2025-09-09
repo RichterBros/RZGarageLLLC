@@ -70,7 +70,7 @@ export default function RootLayout({
                     <div className="space-y-6">
                       {/* Business Information */}
                       <div style={{ color: 'rgb(74, 162, 192)' }}>
-                        <h3 className="text-xl font-bold mb-2">Tuans Auto Service</h3>
+                        <h3 className="text-xl font-bold mb-2">RZ Garage</h3>
                         <p className="text-sm mb-2">FULL SERVICE AUTO REPAIR AND MAINTENANCE</p>
                         <p className="text-sm mb-2">1405 NE Killingsworth St
                         Portland, OR 97211</p>
@@ -91,7 +91,7 @@ export default function RootLayout({
                           >
                             <Image 
                               src="/map-placeholder.jpg" 
-                              alt="Tuans Auto Service Location Map" 
+                              alt="RZ Garage Location Map" 
                               width={800} height={192}
                               className="w-full h-48 object-cover"
                             />
@@ -133,7 +133,7 @@ export default function RootLayout({
               <div className="container mx-auto px-4">
                 <div className="flex justify-center">
                   <div className="text-sm" style={{ color: 'rgb(74, 162, 192)' }}>
-                    <span>© 2025 Tuans Automotive. All rights reserved. // Site by Richter Bros. Media</span>
+                    <span>© 2025 RZ Garage. All rights reserved. // Site by Richter Bros. Media</span>
                   </div>
                 </div>
               </div>

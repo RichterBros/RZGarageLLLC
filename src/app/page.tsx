@@ -27,7 +27,7 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "name": "Tuans Auto Service",
+    "name": "RZ Garage",
     "description": "Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service for oil changes, brakes, engine repair and more.",
     "url": "https://tuansautoservice.com",
     "address": {
@@ -233,17 +233,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tuans Auto Service - Portland Auto Repair | ASE Certified Mechanics | (503) 288-3927</title>
+        <title>RZ Garage - Portland Auto Repair | ASE Certified Mechanics | (503) 288-3927</title>
         <meta name="description" content="Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service for oil changes, brakes, engine repair and more. Located at 1405 NE Killingsworth St, Portland, OR." />
         <meta name="keywords" content="Portland auto repair, Portland mechanic, ASE certified, oil change Portland, brake repair Portland, engine repair Portland, honest mechanic Portland" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Tuans Auto Service - Portland Auto Repair" />
+        <meta property="og:title" content="RZ Garage - Portland Auto Repair" />
         <meta property="og:description" content="Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tuansautoservice.com" />
         <meta property="og:image" content="/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tuans Auto Service - Portland Auto Repair" />
+        <meta name="twitter:title" content="RZ Garage - Portland Auto Repair" />
         <meta name="twitter:description" content="Trusted Portland auto repair shop with ASE certified mechanics." />
         <link rel="canonical" href="https://tuansautoservice.com" />
         <script
@@ -282,29 +282,21 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-5xl px-6">
           <div className="flex-1 text-center md:text-left">
-            <h1 ref={heroHeadingRef} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight hero-heading-slide-in-right" style={{ color: 'rgb(74, 162, 192)', textShadow: '0 2px 0 rgba(0, 0, 0, 0.75)' }}>
+            <h1 ref={heroHeadingRef} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight hero-heading-slide-in-right" style={{ color: 'rgb(255, 255, 255)', textShadow: '0 2px 0 rgba(0, 0, 0, 0.75)' }}>
               Full Service Auto Repair and Maintenance
             </h1>
-            <p className="text-lg md:text-xl mb-4 font-semibold drop-shadow-lg" style={{ color: 'rgb(74, 162, 192)' }}>
+            <p className="text-lg md:text-xl mb-4 font-semibold drop-shadow-lg" style={{ color: 'rgb(255, 255, 255)' }}>
             1405 NE Killingsworth St Portland, OR 97211 <br /> Phone: (503) 288-3927
             </p>
             
-            <a
-              href="/contact"
-              className="inline-block font-bold py-3 px-6 shadow-lg text-lg transition-colors duration-200 mt-2 btn-angled"
-              style={{ 
-                backgroundColor: 'rgb(74, 162, 192)',
-                color: 'rgb(30, 46, 67)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgb(226, 183, 87)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgb(74, 162, 192)';
-              }}
-            >
-              Contact Us!
-            </a>
+            <span className="btn-wrapper">
+              <a
+                href="/contact"
+                className="inline-block font-bold py-3 px-6 shadow-lg text-lg transition-colors duration-200 mt-2 btn-angled"
+              >
+                Contact Us!
+              </a>
+            </span>
           </div>
           {/* ASE Badge Placeholder */}
           <div className="flex-1 flex justify-center md:justify-end mt-8 md:mt-0">
@@ -357,8 +349,8 @@ export default function Home() {
           }}
         />
         <div className="relative z-10 container mx-auto px-4">
-          <div ref={fairHeadingWrapperRef} className="fade-in-from-bottom">
-            <h2 ref={fairHeadingRef} className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight drop-shadow-lg text-center" style={{ color: 'rgb(74, 162, 192)' }}>Fair Pricing And A Comprehensive Warranty On All Repairs</h2>
+          <div ref={fairHeadingWrapperRef} className="fade-in-from-bottom pt-[130px] md:pt-[160px]">
+            <h2 ref={fairHeadingRef} className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight drop-shadow-lg text-center" style={{ color: 'rgb(255, 255, 255)' }}>Fair Pricing And A Comprehensive Warranty On All Repairs</h2>
           </div>
           
         </div>
@@ -394,7 +386,7 @@ export default function Home() {
                 {/* Team image */}
                 <Image 
                   src="/team-placeholder copy.png" 
-                  alt="Tuans Auto Service Team" 
+                  alt="RZ Garage Team" 
                   fill
                   sizes="100vw"
                   className="object-cover cursor-pointer hover:opacity-50 transition-opacity glow-magenta"
@@ -413,7 +405,7 @@ export default function Home() {
                 {/* Shop image */}
                 <Image 
                   src="/tuans-shop.png" 
-                  alt="Tuans Auto Service Shop" 
+                  alt="RZ Garage Shop" 
                   fill
                   sizes="100vw"
                   className="object-cover cursor-pointer hover:opacity-50  transition-opacity glow-magenta"
@@ -476,30 +468,22 @@ export default function Home() {
             
             {/* Review Text */}
             <blockquote className="text-lg md:text-xl leading-relaxed mb-8 text-left" style={{ color: 'rgb(30, 46, 67)' }}>
-            Located in the heart of Portland, OR, Tuans Auto Service stands out as a reliable destination for all your car repair needs. From routine maintenance to complex diagnostics, this auto repair shop offers a wide range of services to keep your vehicle running smoothly on the road. With a team of experienced technicians at the helm, you can trust that your car is in good hands when you bring it to Tuans Auto Service. <br /> <br />
-            What sets Tuans Auto Service apart is their dedication to providing top-notch customer service alongside expert mechanical work. Whether you're dealing with a pesky check engine light or need a quick tune-up, the staff here is known for their friendly approach and willingness to go the extra mile for every customer. Next time your car needs attention, consider paying a visit to Tuans Auto Service for a seamless and stress-free experience.
+            Located in the heart of Portland, OR, RZ Garage stands out as a reliable destination for all your car repair needs. From routine maintenance to complex diagnostics, this auto repair shop offers a wide range of services to keep your vehicle running smoothly on the road. With a team of experienced technicians at the helm, you can trust that your car is in good hands when you bring it to RZ Garage. <br /> <br />
+            What sets RZ Garage apart is their dedication to providing top-notch customer service alongside expert mechanical work. Whether you're dealing with a pesky check engine light or need a quick tune-up, the staff here is known for their friendly approach and willingness to go the extra mile for every customer. Next time your car needs attention, consider paying a visit to RZ Garage for a seamless and stress-free experience.
             </blockquote>
             
             {/* Review Source */}
             {/*<p className="text-sm text-gray-600 mb-8">Review posted on hellophoenix.com</p>*/}
             
             {/* More Reviews Button */}
-            <a 
-              href="/reviews" 
-              className="inline-block font-bold py-3 px-8 transition-colors duration-200 btn-angled"
-              style={{ 
-                backgroundColor: 'rgb(74, 162, 192)',
-                color: 'rgb(30, 46, 67)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgb(226, 183, 87)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgb(74, 162, 192)';
-              }}
-            >
-              More Reviews
-            </a>
+            <span className="btn-wrapper">
+              <a 
+                href="/reviews" 
+                className="inline-block font-bold py-3 px-8 transition-colors duration-200 btn-angled"
+              >
+                More Reviews
+              </a>
+            </span>
           </div>
         </div>
       </section>

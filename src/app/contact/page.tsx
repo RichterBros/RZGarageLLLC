@@ -27,9 +27,9 @@ export default function ContactPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "name": "Tuans Auto Service",
-    "description": "Contact Tuans Auto Service for all your automotive repair needs in Portland, OR. ASE certified mechanics, honest pricing, same-day service.",
-    "url": "https://tuansauto.com/contact",
+    "name": "RZ Garage",
+    "description": "Contact RZ Garage for all your automotive repair needs in Portland, OR. ASE certified mechanics, honest pricing, same-day service.",
+    "url": "https://rzgarage.com/contact",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1405 NE Killingsworth St",
@@ -145,16 +145,16 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Tuans Auto Service Portland | Call (503) 288-3927 | ASE Certified Mechanics</title>
-        <meta name="description" content="Contact Tuans Auto Service in Portland, OR. ASE certified mechanics, honest pricing, same-day service. Call (503) 288-3927 or visit us at 1405 NE Killingsworth St." />
-        <meta name="keywords" content="contact Tuans Auto Service Portland, auto repair Portland contact, mechanic Portland phone, ASE certified mechanic Portland contact" />
+        <title>Contact RZ Garage Portland | Call (503) 288-3927 | ASE Certified Mechanics</title>
+        <meta name="description" content="Contact RZ Garage in Portland, OR. ASE certified mechanics, honest pricing, same-day service. Call (503) 288-3927 or visit us at 1405 NE Killingsworth St." />
+        <meta name="keywords" content="contact RZ Garage Portland, auto repair Portland contact, mechanic Portland phone, ASE certified mechanic Portland contact" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Contact Tuans Auto Service Portland" />
-        <meta property="og:description" content="Contact Tuans Auto Service in Portland, OR. ASE certified mechanics, honest pricing, same-day service." />
+        <meta property="og:title" content="Contact RZ Garage Portland" />
+        <meta property="og:description" content="Contact RZ Garage in Portland, OR. ASE certified mechanics, honest pricing, same-day service." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tuansauto.com/contact" />
+        <meta property="og:url" content="https://rzgarage.com/contact" />
         <meta property="og:image" content="/logo.png" />
-        <link rel="canonical" href="https://tuansauto.com/contact" />
+        <link rel="canonical" href="https://rzgarage.com/contact" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -181,7 +181,7 @@ export default function ContactPage() {
             <div className="space-y-8">
               {/* Business Information */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Tuans Auto Service</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">RZ Garage</h2>
                 
                 
                 {/* Rating */}
@@ -325,29 +325,17 @@ export default function ContactPage() {
 
                 {/* Submit Button */}
                 <div className="flex justify-end">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || (isRecaptchaEnabled && !recaptchaLoaded)}
-                    className={`font-bold py-3 px-8 transition-colors btn-angled ${
-                      isSubmitting || !recaptchaLoaded ? 'opacity-50 cursor-not-allowed' : ''
-                    }`}
-                    style={{ 
-                      backgroundColor: isSubmitting || !recaptchaLoaded ? 'rgb(131, 136, 132)' : 'rgb(74, 162, 192)',
-                      color: 'rgb(30, 46, 67)'
-                    }}
-                    onMouseEnter={(e) => {
-                      if (!isSubmitting && (!isRecaptchaEnabled || recaptchaLoaded)) {
-                        e.currentTarget.style.backgroundColor = 'rgb(226, 183, 87)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isSubmitting && (!isRecaptchaEnabled || recaptchaLoaded)) {
-                        e.currentTarget.style.backgroundColor = 'rgb(74, 162, 192)';
-                      }
-                    }}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Submit'}
-                  </button>
+                  <span className="btn-wrapper">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting || (isRecaptchaEnabled && !recaptchaLoaded)}
+                      className={`font-bold py-3 px-8 transition-colors btn-angled ${
+                        isSubmitting || (isRecaptchaEnabled && !recaptchaLoaded) ? 'opacity-50 cursor-not-allowed' : ''
+                      }`}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Submit'}
+                    </button>
+                  </span>
                 </div>
 
                 {/* reCAPTCHA Notice */}

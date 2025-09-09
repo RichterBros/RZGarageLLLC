@@ -146,7 +146,7 @@ export default function Navigation() {
               >
                 <Image
                   src={logo} 
-                  alt="Tuans Auto Service"
+                  alt="RZ Garage"
                   fill
                   priority={true}
                   

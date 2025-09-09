@@ -62,15 +62,15 @@ export default async function BlogPagedPage({ params }: { params: Params }) {
           {/* Pagination controls */}
           <div className="flex items-center justify-center gap-4 mt-10">
             {page > 1 ? (
-              <Link href={`/blog/page/${page - 1}`} className="px-3 py-2 bg-[rgb(30,46,67)] btn-angled hover:opacity-80">Previous</Link>
+              <span className="btn-wrapper"><Link href={`/blog/page/${page - 1}`} className="px-3 py-2 btn-angled hover:opacity-80">Previous</Link></span>
             ) : (
-              <span className="px-3 py-2 bg-gray-700 btn-angled opacity-50 cursor-not-allowed">Previous</span>
+              <span className="btn-wrapper"><span className="px-3 py-2 btn-angled opacity-50 cursor-not-allowed">Previous</span></span>
             )}
             <span className="opacity-80 text-sm">Page {page} of {totalPages || 1}</span>
             {totalPages && page < totalPages ? (
-              <Link href={`/blog/page/${page + 1}`} className="px-3 py-2 bg-[rgb(30,46,67)] btn-angled hover:opacity-80">Next</Link>
+              <span className="btn-wrapper"><Link href={`/blog/page/${page + 1}`} className="px-3 py-2 btn-angled hover:opacity-80">Next</Link></span>
             ) : (
-              <span className="px-3 py-2 bg-gray-700 btn-angled opacity-50 cursor-not-allowed">Next</span>
+              <span className="btn-wrapper"><span className="px-3 py-2 btn-angled opacity-50 cursor-not-allowed">Next</span></span>
             )}
           </div>
         </>

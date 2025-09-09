@@ -7,9 +7,9 @@ export default function ReviewsPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "name": "Tuans Auto Service",
-    "description": "Read customer reviews and testimonials for Tuans Auto Service in Portland, OR. 4.8-star rated ASE certified mechanics with honest pricing and quality service.",
-    "url": "https://tuansautoservice.com/reviews",
+    "name": "RZ Garage",
+    "description": "Read customer reviews and testimonials for RZ Garage in Portland, OR. 4.8-star rated ASE certified mechanics with honest pricing and quality service.",
+    "url": "https://rzgarage.com/reviews",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1405 NE Killingsworth St",
@@ -37,7 +37,7 @@ export default function ReviewsPage() {
           "@type": "Person",
           "name": "Sarah Johnson"
         },
-        "reviewBody": "Tuans Auto Service is hands down the best mechanic I've ever been to. They diagnosed my engine problem quickly and fixed it for a fair price. The staff is honest and professional. I'll definitely be back!"
+        "reviewBody": "RZ Garage is hands down the best mechanic I've ever been to. They diagnosed my engine problem quickly and fixed it for a fair price. The staff is honest and professional. I'll definitely be back!"
       },
       {
         "@type": "Review",
@@ -58,7 +58,7 @@ export default function ReviewsPage() {
   const reviews = [
     {
       id: 1,
-      text: "Tuans Auto Service is hands down the best mechanic I've ever been to. They diagnosed my engine problem quickly and fixed it for a fair price. The staff is honest and professional. I'll definitely be back!",
+      text: "RZ Garage is hands down the best mechanic I've ever been to. They diagnosed my engine problem quickly and fixed it for a fair price. The staff is honest and professional. I'll definitely be back!",
       author: "Sarah Johnson",
       location: "Portland, OR",
       source: "Google Reviews"
@@ -119,16 +119,16 @@ export default function ReviewsPage() {
   return (
     <>
       <Head>
-        <title>Customer Reviews Portland | Tuans Auto Service | 4.8★ Rated ASE Certified Mechanics</title>
-        <meta name="description" content="Read customer reviews for Tuans Auto Service in Portland, OR. 4.8-star rated ASE certified mechanics with honest pricing and quality auto repair service. Call (503) 288-3927." />
-        <meta name="keywords" content="Tuans Auto Service reviews Portland, auto repair reviews Portland, mechanic reviews Portland, ASE certified mechanic reviews Portland" />
+        <title>Customer Reviews Portland | RZ Garage | 4.8★ Rated ASE Certified Mechanics</title>
+        <meta name="description" content="Read customer reviews for RZ Garage in Portland, OR. 4.8-star rated ASE certified mechanics with honest pricing and quality auto repair service. Call (503) 288-3927." />
+        <meta name="keywords" content="RZ Garage reviews Portland, auto repair reviews Portland, mechanic reviews Portland, ASE certified mechanic reviews Portland" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Customer Reviews Portland | Tuans Auto Service" />
-        <meta property="og:description" content="Read customer reviews for Tuans Auto Service in Portland, OR. 4.8-star rated ASE certified mechanics." />
+        <meta property="og:title" content="Customer Reviews Portland | RZ Garage" />
+        <meta property="og:description" content="Read customer reviews for RZ Garage in Portland, OR. 4.8-star rated ASE certified mechanics." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tuansautoservice.com/reviews" />
+        <meta property="og:url" content="https://rzgarage.com/reviews" />
         <meta property="og:image" content="/logo.png" />
-        <link rel="canonical" href="https://tuansautoservice.com/reviews" />
+        <link rel="canonical" href="https://rzgarage.com/reviews" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -142,7 +142,7 @@ export default function ReviewsPage() {
           <div className="max-w-6xl mx-auto px-4 text-center slide-up-from-below">
             <h1 className="text-5xl font-extrabold tracking-widest mb-4">CUSTOMER REVIEWS</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our valued customers have to say about their experience with Tuans Auto Service
+              See what our valued customers have to say about their experience with RZ Garage
             </p>
           </div>
         </div>
@@ -263,29 +263,17 @@ export default function ReviewsPage() {
                See what our customers are saying on Google Reviews. We're proud of our 4.8-star rating from over 100 satisfied customers.
              </p>
              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://www.google.com/search?sca_esv=3d1e29cf7e253e0e&sxsrf=AE3TifMMmY80KX27jVgtwDGfiFEMvzp2yw:1754071508853&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s3laaL6cGY1EdG5rUpkMGEZ8u0zWPAg9F2ar_BxMO_noKfIlSWVp1y5iuVX_-qvEu4p5CfmDig_MZU9ut0_8XMaImOHJzrlugImdnJEcPONewS7Lww%3D%3D&q=Tuans+Auto+Services+Reviews&sa=X&ved=2ahUKEwj_osjJmeqOAxVCGBAIHYSmIMoQ0bkNegQINRAD&cshid=1754071582339652&biw=2048&bih=991&dpr=1.25"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold py-3 px-8 transition-colors inline-flex items-center gap-2 btn-angled"
-                style={{ 
-                  backgroundColor: 'rgb(74, 162, 192)',
-                  color: 'rgb(30, 46, 67)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgb(226, 183, 87)';
-                  const stars = e.currentTarget.querySelector('[data-stars="true"]') as HTMLElement | null;
-                  if (stars) stars.style.color = 'rgb(30, 46, 67)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgb(74, 162, 192)';
-                  const stars = e.currentTarget.querySelector('[data-stars="true"]') as HTMLElement | null;
-                  if (stars) stars.style.color = 'rgb(226, 183, 87)';
-                }}
-              >
-                <span data-stars="true" style={{ color: 'rgb(226, 183, 87)' }}>★★★★</span>
-                <span>Read All Google Reviews</span>
-              </a>
+              <span className="btn-wrapper">
+                <a 
+                  href="https://www.google.com/search?q=RZ+Garage+Portland+Reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold py-3 px-8 transition-colors inline-flex items-center gap-2 btn-angled"
+                >
+                  <span data-stars="true" style={{ color: 'rgb(226, 183, 87)' }}>★★★★</span>
+                  <span>Read All Google Reviews</span>
+                </a>
+              </span>
             
             </div>
            </div>
@@ -296,41 +284,25 @@ export default function ReviewsPage() {
            <div className="max-w-4xl mx-auto px-4 text-center">
              <h2 className="text-3xl font-bold mb-4">Ready to Experience the Difference?</h2>
              <p className="text-xl text-gray-300 mb-8">
-               Join our satisfied customers and discover why Tuans Auto Service is the trusted choice for automotive care.
+               Join our satisfied customers and discover why RZ Garage is the trusted choice for automotive care.
              </p>
              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-               <a 
-                 href="/contact" 
-                 className="font-bold py-3 px-8 transition-colors btn-angled"
-                 style={{ 
-                   backgroundColor: 'rgb(74, 162, 192)',
-                   color: 'rgb(30, 46, 67)'
-                 }}
-                 onMouseEnter={(e) => {
-                   e.currentTarget.style.backgroundColor = 'rgb(226, 183, 87)';
-                 }}
-                 onMouseLeave={(e) => {
-                   e.currentTarget.style.backgroundColor = 'rgb(74, 162, 192)';
-                 }}
-               >
-                 CONTACT US
-               </a>
-               <a 
-                 href="/services" 
-                 className="font-bold py-3 px-8 transition-colors btn-angled"
-                 style={{ 
-                   backgroundColor: 'rgb(74, 162, 192)',
-                   color: 'rgb(30, 46, 67)'
-                 }}
-                 onMouseEnter={(e) => {
-                   e.currentTarget.style.backgroundColor = 'rgb(226, 183, 87)';
-                 }}
-                 onMouseLeave={(e) => {
-                   e.currentTarget.style.backgroundColor = 'rgb(74, 162, 192)';
-                 }}
-               >
-                 OUR SERVICES
-               </a>
+               <span className="btn-wrapper">
+                 <a 
+                   href="/contact" 
+                   className="font-bold py-3 px-8 transition-colors btn-angled"
+                 >
+                   CONTACT US
+                 </a>
+               </span>
+               <span className="btn-wrapper">
+                 <a 
+                   href="/services" 
+                   className="font-bold py-3 px-8 transition-colors btn-angled"
+                 >
+                   OUR SERVICES
+                 </a>
+               </span>
              </div>
            </div>
          </div>

@@ -580,6 +580,28 @@ button,
 a[role="button"],
 .btn-angled {
   --btn-notch: 8px;
+  display: inline-block;
+  white-space: nowrap;
+  color: #ffffff !important;
+  background: linear-gradient(to bottom, #000000 0%, #7f1d1d 100%);
+  clip-path: polygon(
+    var(--btn-notch) 0,
+    100% 0,
+    100% calc(100% - var(--btn-notch)),
+    calc(100% - var(--btn-notch)) 100%,
+    0 100%,
+    0 var(--btn-notch)
+  );
+}
+
+/* Wrapper provides the white outline around the clipped shape */
+.btn-wrapper {
+  display: inline-block;
+  --btn-notch: 8px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  padding: 1px; /* outline thickness */
+  background: #ffffff; /* outline color */
   clip-path: polygon(
     var(--btn-notch) 0,
     100% 0,
@@ -596,7 +618,8 @@ a[role="button"],
   [type="submit"],
   [type="reset"],
   a[role="button"],
-  .btn-angled { --btn-notch: 10px; }
+  .btn-angled,
+  .btn-wrapper { --btn-notch: 10px; }
 }
 
 @media (min-width: 1280px) {
@@ -605,7 +628,8 @@ a[role="button"],
   [type="submit"],
   [type="reset"],
   a[role="button"],
-  .btn-angled { --btn-notch: 12px; }
+  .btn-angled,
+  .btn-wrapper { --btn-notch: 12px; }
 }
 
 /* Outline that follows AngleCut shapes (works with clip-path using drop-shadow) */

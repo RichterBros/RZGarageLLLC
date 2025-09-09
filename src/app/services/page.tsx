@@ -7,9 +7,9 @@ export default function ServicesPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "name": "Tuans Auto Service",
+    "name": "RZ Garage",
     "description": "Complete auto repair and maintenance services in Portland, OR. Oil changes, brake repair, engine diagnostics, transmission service, and more.",
-    "url": "https://tuansautoservice.com/services",
+    "url": "https://rzgarage.com/services",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1405 NE Killingsworth St",
@@ -57,16 +57,16 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Auto Repair Services Portland | Oil Change, Brake Repair, Engine Diagnostics | Tuans Auto Service</title>
+        <title>Auto Repair Services Portland | Oil Change, Brake Repair, Engine Diagnostics | RZ Garage</title>
         <meta name="description" content="Complete auto repair services in Portland, OR. Oil changes, brake repair, engine diagnostics, transmission service, and more. ASE certified mechanics. Call (503) 288-3927." />
         <meta name="keywords" content="auto repair Portland, oil change Portland, brake repair Portland, engine diagnostics Portland, transmission service Portland, ASE certified mechanic Portland" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Auto Repair Services Portland | Tuans Auto Service" />
+        <meta property="og:title" content="Auto Repair Services Portland | RZ Garage" />
         <meta property="og:description" content="Complete auto repair services in Portland, OR. Oil changes, brake repair, engine diagnostics, and more." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tuansautoservice.com/services" />
+        <meta property="og:url" content="https://rzgarage.com/services" />
         <meta property="og:image" content="/logo.png" />
-        <link rel="canonical" href="https://tuansautoservice.com/services" />
+        <link rel="canonical" href="https://rzgarage.com/services" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

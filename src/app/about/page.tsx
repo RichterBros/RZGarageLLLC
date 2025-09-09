@@ -46,9 +46,9 @@ export default function About() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "name": "Tuans Auto Service",
-    "description": "Learn about Tuans Auto Service - Portland's trusted auto repair shop with ASE certified mechanics. Family-owned business serving Portland since 1995 with honest pricing and quality service.",
-    "url": "https://tuansautoservice.com/about",
+    "name": "RZ Garage",
+    "description": "Learn about RZ Garage - Portland's trusted auto repair shop with ASE certified mechanics. Family-owned business serving Portland since 1995 with honest pricing and quality service.",
+    "url": "https://rzgarage.com/about",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1405 NE Killingsworth St",
@@ -77,16 +77,16 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Tuans Auto Service Portland | ASE Certified Mechanics Since 1995 | (503) 288-3927</title>
-        <meta name="description" content="Learn about Tuans Auto Service - Portland's trusted auto repair shop with ASE certified mechanics. Family-owned business serving Portland since 1995 with honest pricing and quality service." />
-        <meta name="keywords" content="about Tuans Auto Service Portland, ASE certified mechanic Portland, auto repair shop Portland, family owned mechanic Portland, honest mechanic Portland" />
+        <title>About RZ Garage Portland | ASE Certified Mechanics Since 1995 | (503) 288-3927</title>
+        <meta name="description" content="Learn about RZ Garage - Portland's trusted auto repair shop with ASE certified mechanics. Family-owned business serving Portland since 1995 with honest pricing and quality service." />
+        <meta name="keywords" content="about RZ Garage Portland, ASE certified mechanic Portland, auto repair shop Portland, family owned mechanic Portland, honest mechanic Portland" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="About Tuans Auto Service Portland" />
-        <meta property="og:description" content="Learn about Tuans Auto Service - Portland's trusted auto repair shop with ASE certified mechanics since 1995." />
+        <meta property="og:title" content="About RZ Garage Portland" />
+        <meta property="og:description" content="Learn about RZ Garage - Portland's trusted auto repair shop with ASE certified mechanics since 1995." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tuansautoservice.com/about" />
+        <meta property="og:url" content="https://rzgarage.com/about" />
         <meta property="og:image" content="/logo.png" />
-        <link rel="canonical" href="https://tuansautoservice.com/about" />
+        <link rel="canonical" href="https://rzgarage.com/about" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,7 +110,7 @@ export default function About() {
           {/* Content */}
           <div className="relative z-20 text-center text-white hero-text-scale-up">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight drop-shadow-lg">
-              ABOUT TUANS AUTO SERVICE
+              ABOUT RZ GARAGE
             </h1>
             <p className="text-xl md:text-2xl font-semibold drop-shadow-lg">
               Caring for vehicles since 1998
@@ -125,7 +125,7 @@ export default function About() {
               {/* Left Column - About Us (Top Row) */}
               <div className="space-y-6 lg:col-start-1 lg:row-start-1 h-full lg:min-h-[520px] flex flex-col">
                 <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                  Tuans Auto Service Is Family Owned And Operated
+                  RZ Garage Is Family Owned And Operated
                 </h2>
                 
                 <div className="space-y-4 text-gray-700 leading-relaxed">
