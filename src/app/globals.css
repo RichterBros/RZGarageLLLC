@@ -594,13 +594,27 @@ a[role="button"],
   );
 }
 
+/* Match nav hover color (#9ca3af -> tailwind text-gray-400) */
+.btn-angled:hover {
+  color: #9ca3af !important;
+}
+
+/* Keep disabled buttons white */
+.btn-angled:disabled,
+.btn-angled[aria-disabled="true"],
+.btn-angled:disabled:hover,
+.btn-angled[aria-disabled="true"]:hover {
+  color: #ffffff !important;
+}
+
 /* Wrapper provides the white outline around the clipped shape */
 .btn-wrapper {
   display: inline-block;
   --btn-notch: 8px;
+  --outline: 1px;
   flex: 0 0 auto;
   vertical-align: middle;
-  padding: 1px; /* outline thickness */
+  padding: var(--outline); /* outline thickness */
   background: #ffffff; /* outline color */
   clip-path: polygon(
     var(--btn-notch) 0,
@@ -610,7 +624,39 @@ a[role="button"],
     0 100%,
     0 var(--btn-notch)
   );
+  -webkit-clip-path: polygon(
+    var(--btn-notch) 0,
+    100% 0,
+    100% calc(100% - var(--btn-notch)),
+    calc(100% - var(--btn-notch)) 100%,
+    0 100%,
+    0 var(--btn-notch)
+  );
 }
+
+/* Ensure inner button matches wrapper notch exactly */
+.btn-wrapper > .btn-angled {
+  display: block;
+  clip-path: polygon(
+    calc(var(--btn-notch) - var(--outline)) var(--outline),
+    calc(100% - var(--outline)) var(--outline),
+    calc(100% - var(--outline)) calc(100% - (var(--btn-notch) - var(--outline))),
+    calc(100% - (var(--btn-notch) - var(--outline))) calc(100% - var(--outline)),
+    var(--outline) calc(100% - var(--outline)),
+    var(--outline) calc(var(--btn-notch) - var(--outline))
+  );
+  -webkit-clip-path: polygon(
+    calc(var(--btn-notch) - var(--outline)) var(--outline),
+    calc(100% - var(--outline)) var(--outline),
+    calc(100% - var(--outline)) calc(100% - (var(--btn-notch) - var(--outline))),
+    calc(100% - (var(--btn-notch) - var(--outline))) calc(100% - var(--outline)),
+    var(--outline) calc(100% - var(--outline)),
+    var(--outline) calc(var(--btn-notch) - var(--outline))
+  );
+}
+
+/* Optional modifier for slightly thinner outline where anti-aliasing makes it look thicker */
+.btn-outline-thin { --outline: 0.75px; }
 
 @media (min-width: 768px) {
   button,

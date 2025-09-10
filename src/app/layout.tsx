@@ -40,7 +40,7 @@ export default function RootLayout({
         <main className="site-content overflow-x-hidden">{children}</main>
         
         {/* Footer Section */}
-        <footer style={{ backgroundColor: 'rgb(30, 46, 67)', position: 'relative', zIndex: 2500 }}>
+        <footer style={{ backgroundColor: 'rgb(127, 29, 29)', position: 'relative', zIndex: 2500 }}>
           {/* Main Footer Content */}
           <div className="py-16">
             <div className="container mx-auto px-4">
@@ -52,7 +52,7 @@ export default function RootLayout({
                       {/* ASE Certified */}
                       <div className="flex items-center gap-4">
                         <Image src="/ase-certified.png" alt="ASE Certified" width={120} height={120} />
-                        <div style={{ color: 'rgb(74, 162, 192)' }}>
+                        <div style={{ color: 'rgb(255, 255, 255)' }}>
                           <p className="text-sm font-semibold">AUTOMOTIVE</p>
                           <p className="text-sm font-semibold">SERVICE EXCELLENCE</p>
                         </div>
@@ -69,7 +69,7 @@ export default function RootLayout({
                   <div className="w-full lg:w-1/2">
                     <div className="space-y-6">
                       {/* Business Information */}
-                      <div style={{ color: 'rgb(74, 162, 192)' }}>
+                      <div style={{ color: 'rgb(255, 255, 255)' }}>
                         <h3 className="text-xl font-bold mb-2">RZ Garage</h3>
                         <p className="text-sm mb-2">FULL SERVICE AUTO REPAIR AND MAINTENANCE</p>
                         <p className="text-sm mb-2">1405 NE Killingsworth St
@@ -113,7 +113,7 @@ export default function RootLayout({
           </div>
 
           {/* Bottom Navigation Bar */}
-          <div style={{ backgroundColor: 'rgb(30, 46, 67)' }}>
+          <div style={{ backgroundColor: 'rgb(127, 29, 29)' }}>
             {/* Light Grey Navigation Links Bar */}
             <div className="py-4" style={{ backgroundColor: 'rgb(200, 205, 202)' }}>
               <div className="container mx-auto px-4">

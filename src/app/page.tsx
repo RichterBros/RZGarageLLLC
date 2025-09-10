@@ -289,10 +289,10 @@ export default function Home() {
             1405 NE Killingsworth St Portland, OR 97211 <br /> Phone: (503) 288-3927
             </p>
             
-            <span className="btn-wrapper">
+            <span className="btn-wrapper btn-outline-thin mt-2">
               <a
                 href="/contact"
-                className="inline-block font-bold py-3 px-6 shadow-lg text-lg transition-colors duration-200 mt-2 btn-angled"
+                className="inline-block font-bold py-3 px-6 text-lg transition-colors duration-200 btn-angled"
               >
                 Contact Us!
               </a>
@@ -357,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Three Column Info Section */}
-      <section className="relative z-20 py-16" style={{ background: 'linear-gradient(to right, rgb(63, 139, 165), rgb(74, 162, 192), rgb(63, 139, 165))' }}>
+      <section className="relative z-20 py-16" style={{ background: 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(127, 29, 29))' }}>
         <div className="container mx-auto px-4">
           <div ref={topCardRef} className="shadow-lg p-6 md:p-10">
             <div className="grid md:grid-cols-3 gap-8">
@@ -374,8 +374,8 @@ export default function Home() {
                   onClick={() => setSelectedImage("/toyota-land-cruiser.png")}
                 />
               </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(30, 46, 67)' }}>Repair and Maintenance</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'rgb(30, 46, 67)' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(255, 255, 255)' }}>Repair and Maintenance</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'rgb(255, 255, 255)' }}>
                 We service all makes and models - import and domestic - of cars, trucks and SUVs... from oil changes to engine exchanges and everything in between.
               </p>
             </div>
@@ -393,8 +393,8 @@ export default function Home() {
                   onClick={() => setSelectedImage("/team-placeholder copy.png")}
                 />
               </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(30, 46, 67)' }}>Family Owned and Operated</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'rgb(30, 46, 67)' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(255, 255, 255)' }}>Family Owned and Operated</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'rgb(255, 255, 255)' }}>
                 Complete auto repair and maintenance facility with 40 years combined experience caring for vehicles here in Portland since 1998.
               </p>
             </div>
@@ -412,8 +412,8 @@ export default function Home() {
                   onClick={() => setSelectedImage("/tuans-shop.png")}
                 />
               </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(30, 46, 67)' }}>Business Hours</h3>
-              <div className="text-sm leading-relaxed" style={{ color: 'rgb(30, 46, 67)' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(255, 255, 255)' }}>Business Hours</h3>
+              <div className="text-sm leading-relaxed" style={{ color: 'rgb(255, 255, 255)' }}>
                 <p className="mb-2">Mon-Fri: 8:30 AM - 5:00 PM</p>
                 <p className="mb-2">Sat-Sun: Closed</p>
                 <p className="font-semibold">Call to schedule: (503) 288-3927</p>
@@ -425,7 +425,7 @@ export default function Home() {
       </section>
 
       {/* Dark Header Section */}
-      <section className="pt-4 pb-8 -mt-10" style={{ background: 'linear-gradient(to right, rgb(63, 139, 165), rgb(74, 162, 192), rgb(63, 139, 165))' }}>
+      <section className="pt-4 pb-8 -mt-10" style={{ background: 'linear-gradient(to bottom, rgb(127, 29, 29),rgb(127, 29, 29), rgb(0, 0, 0))' }}>
         <div className="container mx-auto px-4">
           <div ref={bottomCardRef} className="relative shadow-lg p-6 md:p-10 overflow-hidden card-angled-br">
             {/* Background image fills card */}
@@ -439,14 +439,14 @@ export default function Home() {
               {/* Gradient to keep left side readable - use brand light blue */}
               <div
                 className="absolute inset-0"
-                style={{ background: 'linear-gradient(to right, rgba(74, 162, 192, 0.85), rgba(74, 162, 192, 0.6), rgba(74, 162, 192, 0))' }}
+                style={{ background: 'linear-gradient(to right, rgba(127, 29, 29), rgba(74, 162, 192, 0))' }}
               />
             </div>
             {/* Content */}
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between">
               {/* Left Side - Text */}
               <div className="flex-1 mb-8 md:mb-0">
-                <h2 className="text-3xl md:text-4xl font-bold leading-tight" style={{ color: 'rgb(30, 46, 67)' }}>
+                <h2 className="text-3xl md:text-4xl font-bold leading-tight" style={{ color: 'rgb(255, 255, 255)' }}>
                   Classics, restoration, 4X4, offroad<br />
                   and performance upgrades and<br />
                   fabrication
