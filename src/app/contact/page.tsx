@@ -32,16 +32,16 @@ export default function ContactPage() {
     "url": "https://rzgarage.com/contact",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1405 NE Killingsworth St",
+      "streetAddress": "1518 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
     },
-    "telephone": "(503) 288-3927",
+    "telephone": "(971) 990-9845",
     "openingHours": "Mo-Fr 08:30-17:00",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "(503) 288-3927",
+      "telephone": "(971) 990-9845",
       "contactType": "customer service",
       "areaServed": "US",
       "availableLanguage": "English"
@@ -145,8 +145,8 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact RZ Garage Portland | Call (503) 288-3927 | ASE Certified Mechanics</title>
-        <meta name="description" content="Contact RZ Garage in Portland, OR. ASE certified mechanics, honest pricing, same-day service. Call (503) 288-3927 or visit us at 1405 NE Killingsworth St." />
+        <title>Contact RZ Garage Portland | Call (971) 990-9845 | ASE Certified Mechanics</title>
+        <meta name="description" content="Contact RZ Garage in Portland, Oregon. ASE certified mechanics, honest pricing, same-day service. Call (971) 990-9845 or visit us at 1518 NE Killingsworth St." />
         <meta name="keywords" content="contact RZ Garage Portland, auto repair Portland contact, mechanic Portland phone, ASE certified mechanic Portland contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Contact RZ Garage Portland" />
@@ -184,13 +184,7 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">RZ Garage</h2>
                 
                 
-                {/* Rating */}
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    <span>★★★★★</span>
-                  </div>
-                  <span className="ml-2 text-gray-600">4.8 (101 reviews)</span>
-                </div>
+              
                 
                 
               </div>
@@ -204,10 +198,10 @@ export default function ContactPage() {
                 
                 <div className="space-y-3">
                   <p className="text-gray-900">
-                    <span className="font-semibold">Phone:</span> (503) 288-3927
+                    <span className="font-semibold">Phone:</span> (971) 990-9845
                   </p>
                   <p className="text-gray-900">
-                    <span className="font-semibold">Address:</span> 1405 NE Killingsworth St Portland, OR 97211
+                    <span className="font-semibold">Address:</span> 1518 NE Killingsworth St Portland, Oregon
                   </p>
                 </div>
               </div>
@@ -227,19 +221,19 @@ export default function ContactPage() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-3">Our Location</h4>
                 <div className="rounded-lg overflow-hidden h-64">
                   <iframe
-                    src="https://www.google.com/maps?q=1405+NE+Killingsworth+St,+Portland,+OR+97211&hl=en&z=15&output=embed"
+                    src="https://www.google.com/maps?q=1518+NE+Killingsworth+St,+Portland,+Oregon&hl=en&z=15&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    aria-label="Map to 1405 NE Killingsworth St, Portland, OR 97211"
+                    aria-label="Map to 1518 NE Killingsworth St, Portland, Oregon"
                   />
                 </div>
                 <div className="mt-2">
                   <a
-                    href="https://www.google.com/maps?q=1405+NE+Killingsworth+St,+Portland,+OR+97211"
+                    href="https://www.google.com/maps?q=1518+NE+Killingsworth+St,+Portland,+Oregon"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 text-sm underline"
@@ -366,7 +360,7 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-gray-600">(503) 288-3927</p>
+                <p className="text-gray-600">(971) 990-9845</p>
                 <p className="text-sm text-gray-500">Available during business hours</p>
               </div>
               <div>
@@ -376,8 +370,8 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
-                <p className="text-gray-600">1405 NE Killingsworth St</p>
-                <p className="text-sm text-gray-500">Portland, OR 97211</p>
+                <p className="text-gray-600">1518 NE Killingsworth St</p>
+                <p className="text-sm text-gray-500">Portland, Oregon</p>
               </div>
               <div>
                 <div className="mb-4" style={{ color: 'rgb(74, 162, 192)' }}>

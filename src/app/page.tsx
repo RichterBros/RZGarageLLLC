@@ -6,6 +6,8 @@ import Head from 'next/head'
 export default function Home() {
   const bgRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const shopHoursVideoRef = useRef<HTMLVideoElement>(null)
+  const showcaseVideoRef = useRef<HTMLVideoElement>(null)
   const [hasPlayed, setHasPlayed] = useState(false)
   const [overlayFadeOut, setOverlayFadeOut] = useState(false)
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -32,12 +34,12 @@ export default function Home() {
     "url": "https://tuansautoservice.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1405 NE Killingsworth St",
+      "streetAddress": "1518 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
     },
-    "telephone": "(503) 288-3927",
+    "telephone": "(971) 990-9845",
     "openingHours": "Mo-Fr 08:30-17:00",
     "priceRange": "$$",
     "aggregateRating": {
@@ -76,18 +78,24 @@ export default function Home() {
         }
       }
       
-      // Video restart logic
-      if (videoRef.current) {
-        const videoRect = videoRef.current.getBoundingClientRect()
-        const isVideoVisible = videoRect.top < window.innerHeight && videoRect.bottom > 0
-        
-        if (isVideoVisible && hasPlayed) {
-          // Video is visible again and has played before, restart it
-          videoRef.current.currentTime = 0
-          videoRef.current.play()
-          setHasPlayed(false)
+      // Visibility-based play/pause for videos
+      const toggleVideoPlayback = (vid?: HTMLVideoElement | null) => {
+        if (!vid) return
+        const rect = vid.getBoundingClientRect()
+        const visible = rect.top < window.innerHeight && rect.bottom > 0
+        if (visible) {
+          if (vid.paused) {
+            void vid.play().catch(() => {})
+          }
+        } else {
+          if (!vid.paused) {
+            vid.pause()
+          }
         }
       }
+      toggleVideoPlayback(videoRef.current)
+      toggleVideoPlayback(shopHoursVideoRef.current)
+      toggleVideoPlayback(showcaseVideoRef.current)
       
       // Fade-in animation on scroll
       const fadeElements = document.querySelectorAll('.fade-in-trigger, .fade-in-from-right, .fade-in-from-bottom')
@@ -233,8 +241,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>RZ Garage - Portland Auto Repair | ASE Certified Mechanics | (503) 288-3927</title>
-        <meta name="description" content="Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service for oil changes, brakes, engine repair and more. Located at 1405 NE Killingsworth St, Portland, OR." />
+        <title>RZ Garage - Portland Auto Repair | ASE Certified Mechanics | (971) 990-9845</title>
+        <meta name="description" content="Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service for oil changes, brakes, engine repair and more. Located at 1518 NE Killingsworth St, Portland, Oregon." />
         <meta name="keywords" content="Portland auto repair, Portland mechanic, ASE certified, oil change Portland, brake repair Portland, engine repair Portland, honest mechanic Portland" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="RZ Garage - Portland Auto Repair" />
@@ -286,7 +294,7 @@ export default function Home() {
               Full Service Auto Repair and Maintenance
             </h1>
             <p className="text-lg md:text-xl mb-4 font-semibold drop-shadow-lg" style={{ color: 'rgb(255, 255, 255)' }}>
-            1405 NE Killingsworth St Portland, OR 97211 <br /> Phone: (503) 288-3927
+            1518 NE Killingsworth St Portland, Oregon <br /> Phone: (971) 990-9845
             </p>
             
             <span className="btn-wrapper btn-outline-thin mt-2">
@@ -366,12 +374,12 @@ export default function Home() {
               <div className="mb-6 card-angled overflow-hidden fade-in-trigger relative h-48">
                 {/* Toyota Land Cruiser image */}
                 <Image 
-                  src="/toyota-land-cruiser.png" 
+                  src="/porsche.jpg" 
                   alt="Toyota Land Cruiser - Repair and Maintenance" 
                   fill
                   sizes="100vw"
                   className="object-cover cursor-pointer hover:opacity-50 transition-opacity glow-magenta"
-                  onClick={() => setSelectedImage("/toyota-land-cruiser.png")}
+                  onClick={() => setSelectedImage("/porsche.jpg")}
                 />
               </div>
               <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(255, 255, 255)' }}>Repair and Maintenance</h3>
@@ -404,19 +412,19 @@ export default function Home() {
               <div className="mb-6 card-angled overflow-hidden fade-in-trigger delay-1000 relative h-48">
                 {/* Shop image */}
                 <Image 
-                  src="/tuans-shop.png" 
+                  src="/engine_out.jpg" 
                   alt="RZ Garage Shop" 
                   fill
                   sizes="100vw"
                   className="object-cover cursor-pointer hover:opacity-50  transition-opacity glow-magenta"
-                  onClick={() => setSelectedImage("/tuans-shop.png")}
+                  onClick={() => setSelectedImage("/engine_out.jpg")}
                 />
               </div>
               <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(255, 255, 255)' }}>Business Hours</h3>
               <div className="text-sm leading-relaxed" style={{ color: 'rgb(255, 255, 255)' }}>
                 <p className="mb-2">Mon-Fri: 8:30 AM - 5:00 PM</p>
                 <p className="mb-2">Sat-Sun: Closed</p>
-                <p className="font-semibold">Call to schedule: (503) 288-3927</p>
+                <p className="font-semibold">Call to schedule: (971) 990-9845</p>
               </div>
             </div>
             </div>
@@ -428,14 +436,23 @@ export default function Home() {
       <section className="pt-4 pb-8 -mt-10" style={{ background: 'linear-gradient(to bottom, rgb(127, 29, 29),rgb(127, 29, 29), rgb(0, 0, 0))' }}>
         <div className="container mx-auto px-4">
           <div ref={bottomCardRef} className="relative shadow-lg p-6 md:p-10 overflow-hidden card-angled-br">
-            {/* Background image fills card */}
+            {/* Background video fills card */}
             <div className="absolute inset-0">
               <div
                 ref={carBgRef}
-                className="absolute inset-0 bg-cover bg-center fade-in-from-bottom"
-                style={{ backgroundImage: "url('/Honda_Prelude_1978 copy.jpg')" }}
-                onClick={() => setSelectedImage('/Honda_Prelude_1978 copy.jpg')}
-              />
+                className="absolute inset-0 fade-in-from-bottom"
+              >
+                <video
+                  ref={showcaseVideoRef}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                >
+                  <source src="/shop_bmws.mp4" type="video/mp4" />
+                </video>
+              </div>
               {/* Gradient to keep left side readable - use brand light blue */}
               <div
                 className="absolute inset-0"
@@ -481,7 +498,7 @@ export default function Home() {
                 href="/reviews" 
                 className="inline-block font-bold py-3 px-8 transition-colors duration-200 btn-angled"
               >
-                More Reviews
+                Our Work
               </a>
             </span>
           </div>

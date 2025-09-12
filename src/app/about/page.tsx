@@ -51,12 +51,12 @@ export default function About() {
     "url": "https://rzgarage.com/about",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1405 NE Killingsworth St",
+      "streetAddress": "1518 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
     },
-    "telephone": "(503) 288-3927",
+    "telephone": "(971) 990-9845",
     "openingHours": "Mo-Fr 08:30-17:00",
     "priceRange": "$$",
     "foundingDate": "1995",
@@ -77,7 +77,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About RZ Garage Portland | ASE Certified Mechanics Since 1995 | (503) 288-3927</title>
+        <title>About RZ Garage Portland | ASE Certified Mechanics Since 1995 | (971) 990-9845</title>
         <meta name="description" content="Learn about RZ Garage - Portland's trusted auto repair shop with ASE certified mechanics. Family-owned business serving Portland since 1995 with honest pricing and quality service." />
         <meta name="keywords" content="about RZ Garage Portland, ASE certified mechanic Portland, auto repair shop Portland, family owned mechanic Portland, honest mechanic Portland" />
         <meta name="robots" content="index, follow" />
@@ -152,7 +152,7 @@ export default function About() {
                     FULL SERVICE AUTO REPAIR AND MAINTENANCE
                   </p>
                   <p className="text-lg font-bold text-gray-800 text-center">
-                    Call to schedule: (503) 288-3927
+                    Call to schedule: (971) 990-9845
                   </p>
                 </div>
                 

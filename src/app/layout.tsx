@@ -72,9 +72,9 @@ export default function RootLayout({
                       <div style={{ color: 'rgb(255, 255, 255)' }}>
                         <h3 className="text-xl font-bold mb-2">RZ Garage</h3>
                         <p className="text-sm mb-2">FULL SERVICE AUTO REPAIR AND MAINTENANCE</p>
-                        <p className="text-sm mb-2">1405 NE Killingsworth St
-                        Portland, OR 97211</p>
-                        <p className="text-sm mb-4">Call to schedule: <span className="font-bold">(503) 288-3927</span></p>
+                        <p className="text-sm mb-2">1518 NE Killingsworth St, Portland, OR 97211
+                        </p>
+                        <p className="text-sm mb-4">Call to schedule: <span className="font-bold">(971) 990-9845</span></p>
                         <div className="text-sm">
                           <p>Mon-Fri: 8:30 am - 5:00 pm</p>
                           <p>Sat-Sun: Closed</p>
@@ -84,7 +84,7 @@ export default function RootLayout({
                                              {/* Map Placeholder */}
                                                <div className="relative">
                           <a 
-                            href="https://www.google.com/maps/place/Tuans+Auto+Services/@45.5636394,-122.657723,15z/data=!4m16!1m7!3m6!1s0x5495a71ddd2f4d51:0x6a1ab02e837f0ab9!2sTuans+Auto+Services!8m2!3d45.5630282!4d-122.6508855!16s%2Fg%2F1tdbkq2y!3m7!1s0x5495a71ddd2f4d51:0x6a1ab02e837f0ab9!8m2!3d45.5630282!4d-122.6508855!9m1!1b1!16s%2Fg%2F1tdbkq2y?entry=ttu&g_ep=EgoyMDI1MDcyOS4wIKXMDSoASAFQAw%3D%3D" 
+                            href="https://www.google.com/maps/place/1518+NE+Killingsworth+St,+Portland,+OR+97211/@45.5624726,-122.6496424,18.75z/data=!4m6!3m5!1s0x5495a71e0ecaac55:0xf65b8f41ebde5257!8m2!3d45.5625053!4d-122.6492327!16s%2Fg%2F11c4tn4rwy?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="block w-full h-48 rounded-lg overflow-hidden hover:opacity-90 transition-opacity"
@@ -97,7 +97,7 @@ export default function RootLayout({
                             />
                           </a>
                           <a 
-                            href="https://www.google.com/maps/place/Tuans+Auto+Services/@45.5636394,-122.657723,15z/data=!4m16!1m7!3m6!1s0x5495a71ddd2f4d51:0x6a1ab02e837f0ab9!2sTuans+Auto+Services!8m2!3d45.5630282!4d-122.6508855!16s%2Fg%2F1tdbkq2y!3m7!1s0x5495a71ddd2f4d51:0x6a1ab02e837f0ab9!8m2!3d45.5630282!4d-122.6508855!9m1!1b1!16s%2Fg%2F1tdbkq2y?entry=ttu&g_ep=EgoyMDI1MDcyOS4wIKXMDSoASAFQAw%3D%3D" 
+                            href="https://www.google.com/maps/place/1518+NE+Killingsworth+St,+Portland,+OR+97211/@45.5624726,-122.6496424,18.75z/data=!4m6!3m5!1s0x5495a71e0ecaac55:0xf65b8f41ebde5257!8m2!3d45.5625053!4d-122.6492327!16s%2Fg%2F11c4tn4rwy?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="absolute top-2 left-2 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded hover:bg-opacity-90 transition-colors"
@@ -121,7 +121,7 @@ export default function RootLayout({
                    <a href="/" className="hover:text-gray-400">HOME</a>
                    <a href="/services" className="hover:text-gray-400">SERVICES</a>
                    <a href="/about" className="hover:text-gray-400">ABOUT</a>
-                   <a href="/reviews" className="hover:text-gray-400">REVIEWS</a>
+                   <a href="/reviews" className="hover:text-gray-400">OUR WORK</a>
                    <a href="/contact" className="hover:text-gray-400">CONTACT</a>
                    <a href="/blog" className="hover:text-gray-400">BLOG</a>
                  </div>
@@ -132,7 +132,7 @@ export default function RootLayout({
             <div className="py-4">
               <div className="container mx-auto px-4">
                 <div className="flex justify-center">
-                  <div className="text-sm" style={{ color: 'rgb(74, 162, 192)' }}>
+                  <div className="text-sm" style={{ color: 'rgb(255, 255, 255)' }}>
                     <span>© 2025 RZ Garage. All rights reserved. // Site by Richter Bros. Media</span>
                   </div>
                 </div>

@@ -12,12 +12,12 @@ export default function ServicesPage() {
     "url": "https://rzgarage.com/services",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1405 NE Killingsworth St",
+      "streetAddress": "1518 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
     },
-    "telephone": "(503) 288-3927",
+    "telephone": "(971) 990-9845",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Auto Repair Services",
@@ -58,7 +58,7 @@ export default function ServicesPage() {
     <>
       <Head>
         <title>Auto Repair Services Portland | Oil Change, Brake Repair, Engine Diagnostics | RZ Garage</title>
-        <meta name="description" content="Complete auto repair services in Portland, OR. Oil changes, brake repair, engine diagnostics, transmission service, and more. ASE certified mechanics. Call (503) 288-3927." />
+        <meta name="description" content="Complete auto repair services in Portland, OR. Oil changes, brake repair, engine diagnostics, transmission service, and more. ASE certified mechanics. Call (971) 990-9845." />
         <meta name="keywords" content="auto repair Portland, oil change Portland, brake repair Portland, engine diagnostics Portland, transmission service Portland, ASE certified mechanic Portland" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Auto Repair Services Portland | RZ Garage" />
@@ -111,7 +111,7 @@ export default function ServicesPage() {
             {/* Three Column Services */}
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Column 1 - Left */}
-              <div className="p-8 card-angled overflow-hidden" style={{ background: 'linear-gradient(to top, rgba(255,222,0,0.2), #ffffff)' }}>
+              <div className="p-8 card-angled overflow-hidden" style={{ background: 'linear-gradient(to top, rgba(135, 135, 135,0.2 ),rgb(196, 196, 196,0))' }}>
                 <h3 className="text-xl font-bold text-gray-800 mb-6">Basic Services</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
@@ -158,7 +158,7 @@ export default function ServicesPage() {
               </div>
 
               {/* Column 2 - Middle */}
-              <div className="p-8 card-angled overflow-hidden" style={{ background: 'linear-gradient(to top, rgba(255,222,0,0.2), #ffffff)' }}>
+              <div className="p-8 card-angled overflow-hidden" style={{ background: 'linear-gradient(to top, rgba(135, 135, 135,0.2 ),rgb(196, 196, 196,0))' }}>
                 <h3 className="text-xl font-bold text-gray-800 mb-6">Advanced Services</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
@@ -205,7 +205,7 @@ export default function ServicesPage() {
               </div>
 
               {/* Column 3 - Right */}
-              <div className="p-8 card-angled overflow-hidden" style={{ background: 'linear-gradient(to top, rgba(255,222,0,0.2), #ffffff)' }}>
+              <div className="p-8 card-angled overflow-hidden" style={{ background: 'linear-gradient(to top, rgba(135, 135, 135,0.2 ),rgb(196, 196, 196,0))' }}>
                 <h3 className="text-xl font-bold text-gray-800 mb-6">Additional Services</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
