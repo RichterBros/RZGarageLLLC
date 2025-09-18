@@ -276,7 +276,7 @@ export default function Home() {
             console.log('Video failed to load:', e);
           }}
         >
-          <source src="/hero-video8.mp4" type="video/mp4" />
+          <source src="/bmw_hero.mp4" type="video/mp4" />
         </video>
       </div>
       {/* Global dark gradient overlay over video */}

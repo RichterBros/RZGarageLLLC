@@ -1,9 +1,11 @@
 "use client";
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Head from 'next/head';
 
 export default function About() {
+  const injectorVideoRef = useRef<HTMLVideoElement>(null)
+  const hasPlayedRef = useRef(false)
   useEffect(() => {
     const handleScroll = () => {
       // Check if the shop exterior trigger is visible
@@ -21,6 +23,17 @@ export default function About() {
             
             // Shop image first (0ms delay)
             if (shopImage) shopImage.classList.add('visible')
+
+            // Play the injector video once when visible
+            if (injectorVideoRef.current && !hasPlayedRef.current) {
+              try {
+                injectorVideoRef.current.currentTime = 0
+                injectorVideoRef.current.play()
+                hasPlayedRef.current = true
+              } catch (e) {
+                // ignore autoplay errors
+              }
+            }
             
             // Team image second (200ms delay) - handle both desktop and mobile
             setTimeout(() => {
@@ -171,23 +184,31 @@ export default function About() {
                   </div>
                 </div>
                 
-                {/* Shop Exterior Image - trigger */}
-                <div className="w-full h-[306px] card-angled overflow-hidden mb-0 fade-in-from-right mt-auto relative" id="image-trigger">
-                  <Image src="/shop-exterior-red-car.jpg" alt="Shop Exterior with Red Sports Car" fill sizes="100vw" className="object-cover" style={{ objectPosition: 'center 60%' }} />
-                </div>
+              {/* Shop Exterior Video - trigger */}
+              <div className="w-full h-[306px] card-angled overflow-hidden mb-0 fade-in-from-right mt-auto relative" id="image-trigger">
+                <video
+                  ref={injectorVideoRef}
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover"
+                >
+                  <source src="/injector-clean.mp4" type="video/mp4" />
+                </video>
+              </div>
                 
                 {/* Team Image - Shown on mobile, hidden on desktop */}
                 <div className="block lg:hidden w-full h-64 card-angled overflow-hidden fade-in-from-left relative" id="team-image-mobile">
-                  <Image src="/team_straight_on_front.jpg" alt="Team Photo" fill sizes="100vw" className="object-cover" />
+                  <Image src="/dodge.jpg" alt="Dodge Grand Caravan 2018 Cluster replacement" fill sizes="100vw" className="object-cover" />
                 </div>
               </div>
 
               {/* Bottom Row - Aligned Grey Boxes */}
               <div className="hidden lg:block w-full h-64 card-angled overflow-hidden fade-in-from-left lg:col-start-1 lg:row-start-2 mb-0 relative" id="team-image-desktop">
-                <Image src="/team_straight_on_front.jpg" alt="Team Photo" fill sizes="50vw" className="object-cover" />
+                <Image src="/dodge.jpg" alt="Dodge Grand Caravan 2018 Cluster replacement" fill sizes="50vw" className="object-cover" />
               </div>
               <div className="w-full h-64 card-angled overflow-hidden fade-in-from-right lg:col-start-2 lg:row-start-2 mb-0 relative" id="garage-image">
-                <Image src="/Garage_Interior.jpg" alt="Garage Interior" fill sizes="50vw" className="object-cover" />
+                <Image src="/alpha.jpg" alt="Alfa Romeo" fill sizes="50vw" className="object-cover" />
               </div>
               {/* Spacer Row to force 50px gap before footer on large screens */}
               <div className="hidden lg:block lg:col-span-2 lg:row-start-3 h-[25px]" aria-hidden />
