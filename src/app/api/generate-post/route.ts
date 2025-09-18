@@ -144,7 +144,7 @@ async function uploadImageToContentful({
         Authorization: `Bearer ${CMA_TOKEN}`,
         'Content-Type': 'application/octet-stream',
       },
-      body: buffer,
+      body: new Uint8Array(buffer),
     }
   )
   if (!uploadRes.ok) {
