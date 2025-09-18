@@ -113,6 +113,7 @@ export default function ContactPage() {
           throw new Error('reCAPTCHA is not ready. Please try again in a moment.');
         }
         token = await getRecaptchaToken();
+        console.log('[reCAPTCHA] Token generated:', token ? `${token.substring(0, 10)}...` : 'null');
         if (!token) {
           throw new Error('reCAPTCHA could not be verified. Please reload the page or temporarily disable ad blockers.');
         }

@@ -82,6 +82,15 @@ export async function POST(request: Request): Promise<Response> {
 
     const recaptcha = bypassRecaptcha ? { ok: true } : await verifyRecaptcha(token, clientIp)
     if (!recaptcha.ok) {
+      console.error('[reCAPTCHA] Verification failed in API route', {
+        errors: recaptcha.errors,
+        action: recaptcha.action,
+        score: recaptcha.score,
+        hostname: recaptcha.hostname,
+        clientIp,
+        hostHeader,
+        token: token ? `${token.substring(0, 10)}...` : 'null'
+      })
       const includeDetails = process.env.DEBUG_RECAPTCHA === 'true' || process.env.NODE_ENV !== 'production'
       const body = includeDetails
         ? { error: 'reCAPTCHA verification failed', details: { errors: recaptcha.errors, action: recaptcha.action, score: recaptcha.score, hostname: recaptcha.hostname } }
