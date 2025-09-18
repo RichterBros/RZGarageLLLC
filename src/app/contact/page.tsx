@@ -22,6 +22,9 @@ export default function ContactPage() {
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
   const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const isRecaptchaEnabled = !!RECAPTCHA_SITE_KEY;
+  
+  console.log('[reCAPTCHA] Site key loaded:', RECAPTCHA_SITE_KEY ? `${RECAPTCHA_SITE_KEY.substring(0, 10)}...` : 'null');
+  console.log('[reCAPTCHA] Enabled:', isRecaptchaEnabled);
 
   // Structured data for contact page
   const structuredData = {
@@ -83,13 +86,23 @@ export default function ContactPage() {
   const getRecaptchaToken = (): Promise<string | null> => {
     return new Promise((resolve) => {
       if (!isRecaptchaEnabled) return resolve(null);
-      if (!window.grecaptcha || typeof window.grecaptcha.ready !== 'function') return resolve(null);
+      if (!window.grecaptcha || typeof window.grecaptcha.ready !== 'function') {
+        console.error('[reCAPTCHA] grecaptcha not available');
+        return resolve(null);
+      }
       const siteKey = String(RECAPTCHA_SITE_KEY);
+      console.log('[reCAPTCHA] Attempting to generate token with site key:', siteKey);
       window.grecaptcha.ready(() => {
         window.grecaptcha
           .execute(siteKey, { action: 'contact_form' })
-          .then((t) => resolve(t))
-          .catch(() => resolve(null));
+          .then((t) => {
+            console.log('[reCAPTCHA] Token generated successfully');
+            resolve(t);
+          })
+          .catch((error) => {
+            console.error('[reCAPTCHA] Token generation failed:', error);
+            resolve(null);
+          });
       });
     });
   };
@@ -136,6 +149,12 @@ export default function ContactPage() {
       setFormData({ name: '', phone: '', email: '', message: '' });
     } catch (error: any) {
       console.error('Form submission error:', error);
+      console.error('Error details:', {
+        name: error?.name,
+        message: error?.message,
+        stack: error?.stack,
+        cause: error?.cause
+      });
       const message = typeof error?.message === 'string' ? error.message : 'There was an error submitting your form. Please try again.';
       alert(message);
     } finally {
