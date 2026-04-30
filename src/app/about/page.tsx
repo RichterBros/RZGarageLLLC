@@ -64,13 +64,13 @@ export default function About() {
     "url": "https://rzgarage.com/about",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1518 NE Killingsworth St",
+      "streetAddress": "1540 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
     },
     "telephone": "(971) 990-9845",
-    "openingHours": "Mo-Fr 08:30-17:00",
+    "openingHours": "Mo-Fr 09:00-18:00",
     "priceRange": "$$",
     "foundingDate": "1995",
     "founder": {

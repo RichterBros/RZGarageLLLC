@@ -34,13 +34,13 @@ export default function Home() {
     "url": "https://tuansautoservice.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1518 NE Killingsworth St",
+      "streetAddress": "1540 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
     },
     "telephone": "(971) 990-9845",
-    "openingHours": "Mo-Fr 08:30-17:00",
+    "openingHours": "Mo-Fr 09:00-18:00",
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -242,7 +242,7 @@ export default function Home() {
     <>
       <Head>
         <title>RZ Garage - Portland Auto Repair | ASE Certified Mechanics | (971) 990-9845</title>
-        <meta name="description" content="Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service for oil changes, brakes, engine repair and more. Located at 1518 NE Killingsworth St, Portland, Oregon." />
+        <meta name="description" content="Trusted Portland auto repair shop with ASE certified mechanics. Honest pricing, same-day service for oil changes, brakes, engine repair and more. Located at 1540 NE Killingsworth St, Portland OR 97211." />
         <meta name="keywords" content="Portland auto repair, Portland mechanic, ASE certified, oil change Portland, brake repair Portland, engine repair Portland, honest mechanic Portland" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="RZ Garage - Portland Auto Repair" />
@@ -294,7 +294,7 @@ export default function Home() {
               Full Service Auto Repair and Maintenance
             </h1>
             <p className="text-lg md:text-xl mb-4 font-semibold drop-shadow-lg" style={{ color: 'rgb(255, 255, 255)' }}>
-            1518 NE Killingsworth St Portland, Oregon <br /> Phone: (971) 990-9845
+            1540 NE Killingsworth St Portland OR 97211 <br /> Phone: (971) 990-9845
             </p>
             
             <span className="btn-wrapper btn-outline-thin mt-2">
@@ -422,7 +422,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(255, 255, 255)' }}>Business Hours</h3>
               <div className="text-sm leading-relaxed" style={{ color: 'rgb(255, 255, 255)' }}>
-                <p className="mb-2">Mon-Fri: 8:30 AM - 5:00 PM</p>
+                <p className="mb-2">Mon-Fri: 9:00 AM - 6:00 PM</p>
                 <p className="mb-2">Sat-Sun: Closed</p>
                 <p className="font-semibold">Call to schedule: (971) 990-9845</p>
               </div>

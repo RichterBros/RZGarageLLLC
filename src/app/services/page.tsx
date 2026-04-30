@@ -12,7 +12,7 @@ export default function ServicesPage() {
     "url": "https://rzgarage.com/services",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1518 NE Killingsworth St",
+      "streetAddress": "1540 NE Killingsworth St",
       "addressLocality": "Portland",
       "addressRegion": "OR",
       "postalCode": "97211"
@@ -136,11 +136,11 @@ export default function ServicesPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
-                    Water pumps
+                    Timing chain
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
-                    Tires & wheels
+                    Water pumps
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
@@ -153,6 +153,10 @@ export default function ServicesPage() {
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
                     Air conditioning
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
+                    Alignment
                   </li>
                 </ul>
               </div>
@@ -172,6 +176,14 @@ export default function ServicesPage() {
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
                     Engine performance
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
+                    Coding and programming
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
+                    Chiptuning
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
@@ -197,10 +209,6 @@ export default function ServicesPage() {
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
                     Automatic transmission
                   </li>
-                  <li className="flex items-start">
-                    <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
-                    Welding and fabrication
-                  </li>
                 </ul>
               </div>
 
@@ -211,10 +219,6 @@ export default function ServicesPage() {
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
                     Towing available
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
-                    Shuttle service within 10 miles
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2" style={{ color: 'rgb(74, 162, 192)' }}>•</span>
