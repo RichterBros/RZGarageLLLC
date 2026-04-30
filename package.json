@@ -13,10 +13,11 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "dependencies": {
-    "next": "^15.3.6",
+    "@netlify/plugin-nextjs": "^5.15.10",
+    "next": "^15.5.15",
     "nodemailer": "^6.9.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
