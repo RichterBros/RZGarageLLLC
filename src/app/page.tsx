@@ -294,7 +294,7 @@ export default function Home() {
               Full Service Auto Repair and Maintenance
             </h1>
             <p className="text-lg md:text-xl mb-4 font-semibold drop-shadow-lg" style={{ color: 'rgb(255, 255, 255)' }}>
-            1540 NE Killingsworth St Portland OR 97211 <br /> Phone: (971) 990-9845
+            1540 NE Killingsworth St Portland OR 97211 <br /> Phone: <a href="tel:+19719909845" className="hover:underline">(971) 990-9845</a>
             </p>
             
             <span className="btn-wrapper btn-outline-thin mt-2">
@@ -424,7 +424,7 @@ export default function Home() {
               <div className="text-sm leading-relaxed" style={{ color: 'rgb(255, 255, 255)' }}>
                 <p className="mb-2">Mon-Fri: 9:00 AM - 6:00 PM</p>
                 <p className="mb-2">Sat-Sun: Closed</p>
-                <p className="font-semibold">Call to schedule: (971) 990-9845</p>
+                <p className="font-semibold">Call to schedule: <a href="tel:+19719909845" className="hover:underline">(971) 990-9845</a></p>
               </div>
             </div>
             </div>

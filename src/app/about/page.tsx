@@ -165,7 +165,7 @@ export default function About() {
                     FULL SERVICE AUTO REPAIR AND MAINTENANCE
                   </p>
                   <p className="text-lg font-bold text-gray-800 text-center">
-                    Call to schedule: (971) 990-9845
+                    Call to schedule: <a href="tel:+19719909845" className="hover:underline">(971) 990-9845</a>
                   </p>
                 </div>
                 

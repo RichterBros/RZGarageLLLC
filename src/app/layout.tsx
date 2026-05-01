@@ -57,11 +57,6 @@ export default function RootLayout({
                           <p className="text-sm font-semibold">SERVICE EXCELLENCE</p>
                         </div>
                       </div>
-                      
-                      {/* A+ Rating and BBB Accredited */}
-                      <div className="flex items-center gap-2">
-                        <Image src="/BBB-rating-logo.png" alt="BBB Rating" width={300} height={300} />
-                      </div>
                     </div>
                   </div>
 
@@ -74,7 +69,7 @@ export default function RootLayout({
                         <p className="text-sm mb-2">FULL SERVICE AUTO REPAIR AND MAINTENANCE</p>
                         <p className="text-sm mb-2">1540 NE Killingsworth St, Portland, OR 97211
                         </p>
-                        <p className="text-sm mb-4">Call to schedule: <span className="font-bold">(971) 990-9845</span></p>
+                        <p className="text-sm mb-4">Call to schedule: <a href="tel:+19719909845" className="font-bold hover:underline">(971) 990-9845</a></p>
                         <div className="text-sm">
                           <p>Mon-Fri: 9:00 am - 6:00 pm</p>
                           <p>Sat-Sun: Closed</p>

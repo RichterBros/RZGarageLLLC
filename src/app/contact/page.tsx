@@ -260,7 +260,7 @@ export default function ContactPage() {
 
                 <div className="space-y-3">
                   <p className="text-gray-900">
-                    <span className="font-semibold">Phone:</span> (971) 990-9845
+                    <span className="font-semibold">Phone:</span> <a href="tel:+19719909845" className="hover:underline">(971) 990-9845</a>
                   </p>
                   <p className="text-gray-900">
                     <span className="font-semibold">Address:</span> 1540 NE Killingsworth St Portland OR 97211
@@ -444,18 +444,20 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="mb-4" style={{ color: "rgb(74, 162, 192)" }}>
-                  <span
-                    className="material-symbols-outlined align-middle"
-                    style={{ fontSize: "40px", lineHeight: 1 }}
-                    aria-hidden
-                  >
-                    call
-                  </span>
+                  <a href="tel:+19719909845" aria-label="Call RZ Garage" className="transition-colors hover:text-gray-400">
+                    <span
+                      className="material-symbols-outlined align-middle"
+                      style={{ fontSize: "40px", lineHeight: 1 }}
+                      aria-hidden
+                    >
+                      call
+                    </span>
+                  </a>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   Call Us
                 </h3>
-                <p className="text-gray-600">(971) 990-9845</p>
+                <p className="text-gray-600"><a href="tel:+19719909845" className="hover:underline">(971) 990-9845</a></p>
                 <p className="text-sm text-gray-500">
                   Available during business hours
                 </p>
